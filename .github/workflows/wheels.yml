@@ -101,7 +101,6 @@ jobs:
 
     - name: Build wheels
       run: |
-        package_build/initialize.sh
         python -m build --wheel
         mkdir wheelhouse
         mv dist/*.whl wheelhouse/
