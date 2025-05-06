@@ -25,7 +25,7 @@ jobs:
     - name: install python dependencies
       run: pip install build twine
 
-    - uses: bazel-contrib/setup-bazel@0.8.5
+    - uses: bazel-contrib/setup-bazel@0.14.0
       name: Set up Bazel
       # with:
       #   # Avoid downloading Bazel every time.
