@@ -27,13 +27,13 @@ jobs:
 
     - uses: bazel-contrib/setup-bazel@0.14.0
       name: Set up Bazel
-      # with:
-      #   # Avoid downloading Bazel every time.
-      #   bazelisk-cache: false
-      #   # Store build cache per workflow.
-      #   #disk-cache: ${{ github.workflow }}-${{ hashFiles('.github/workflows/wheels.yml') }}
-      #   # Share repository cache between workflows.
-      #   repository-cache: false
+      with:
+        # Avoid downloading Bazel every time.
+        bazelisk-cache: true
+        # Store build cache per workflow.
+        disk-cache: ${{ github.workflow }}-${{ hashFiles('.github/workflows/wheels.yml') }}
+        # Share repository cache between workflows.
+        repository-cache: true
 
     - name: Verify bazel installation
       run: |
@@ -86,7 +86,7 @@ jobs:
         # Avoid downloading Bazel every time.
         bazelisk-cache: false
         # Store build cache per workflow.
-        #disk-cache: ${{ github.workflow }}-${{ hashFiles('.github/workflows/wheels.yml') }}
+        disk-cache: ${{ github.workflow }}-${{ hashFiles('.github/workflows/wheels.yml') }}
         # Share repository cache between workflows.
         repository-cache: false
 
