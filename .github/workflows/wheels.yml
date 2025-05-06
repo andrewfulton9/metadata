@@ -143,3 +143,5 @@ jobs:
         with:
           packages-dir: wheels/
           repository-url: https://test.pypi.org/legacy/
+          packages_dir: wheels/
+          repository_url: https://test.pypi.org/legacy/
