@@ -100,7 +100,7 @@ with open('README.md') as fp:
   _LONG_DESCRIPTION = fp.read()
 
 setup(
-    name='tensorflow-metadata',
+    name='ajf-test-metadata',
     version=__version__,
     author='Google Inc.',
     author_email='tensorflow-extended-dev@googlegroups.com',
